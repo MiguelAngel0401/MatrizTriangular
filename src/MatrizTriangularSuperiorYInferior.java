@@ -65,5 +65,10 @@ public class MatrizTriangularSuperiorYInferior{
         System.out.println("Ingresar el numero de columnas:");
         entrada = buffer.readLine();
         columnas = Integer.parseInt(entrada);
+
+        int[][] A = leerMatriz(filas, columnas, A);
+
+        System.out.println("Las Matrices");
+        imprimirMatriz(A, 'A');
     }
 }
