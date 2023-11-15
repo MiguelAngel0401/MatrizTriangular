@@ -7,6 +7,8 @@ public class MatrizTriangularSuperiorYInferior {
     public static BufferedReader buffer = new BufferedReader(new InputStreamReader(System.in));
     public static String entrada;
 
+    // Craecion de las matrices.
+
     public static int[][] leerMatriz(int filas, int columnas, char nombre) throws IOException {
         int[][] matriz = new int[filas][columnas];
 
@@ -20,6 +22,7 @@ public class MatrizTriangularSuperiorYInferior {
         return matriz;
     }
 
+    //Funcion para la Impresion de la matriz
     public static void imprimirMatriz(int[][] matriz, char nombre) {
         for (int i = 0; i < matriz.length; i++) {
             for (int j = 0; j < matriz[0].length; j++) {
@@ -29,6 +32,7 @@ public class MatrizTriangularSuperiorYInferior {
         }
     }
 
+    //Creacion de Matriz Superior
     public static boolean esTriangularSuperior(int[][] matriz) {
         for (int i = 0; i < matriz.length; i++) {
             for (int j = 0; j < i; j++) {
@@ -40,6 +44,7 @@ public class MatrizTriangularSuperiorYInferior {
         return true;
     }
 
+    //Creacion de matriz Inferior
     public static boolean esTriangularInferior(int[][] matriz) {
         for (int i = 0; i < matriz.length; i++) {
             for (int j = i + 1; j < matriz[i].length; j++) {
@@ -54,9 +59,13 @@ public class MatrizTriangularSuperiorYInferior {
     public static void main(String[] args) throws Exception {
         int filas, columnas;
 
-        System.out.println("Que tipo de matriz quieres usar? (superior/inferior):");
+        //Solicitar el tipo de matriz
+
+        System.out.println("Ingresa el tipo de Matriz? (Superior/Inferior):");
         entrada = buffer.readLine();
         String tipoMatriz = entrada.toLowerCase();
+
+        // Solicitar filas y columnas 
 
         System.out.println("Ingresar el número de filas:");
         entrada = buffer.readLine();
@@ -66,13 +75,19 @@ public class MatrizTriangularSuperiorYInferior {
         entrada = buffer.readLine();
         columnas = Integer.parseInt(entrada);
 
+        //Lectura de la matriz
         int[][] A = leerMatriz(filas, columnas, 'A');
 
-        System.out.println("La Matriz:");
+        //Impresion de la matriz
+
+        System.out.println("El tipo de Matriz:");
         imprimirMatriz(A, 'A');
 
+        //Permite saber si es Matriz superior o inferior
         boolean esTriangularSuperior = esTriangularSuperior(A);
         boolean esTriangularInferior = esTriangularInferior(A);
+
+        //Hace una comparacion para detrminar si es matriz inferior o superior
 
         if ("superior".equals(tipoMatriz) && esTriangularSuperior) {
             System.out.println("La matriz es Triangular Superior");
