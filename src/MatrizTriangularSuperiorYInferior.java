@@ -11,10 +11,13 @@ public class MatrizTriangularSuperiorYInferior{
         int[][] matriz = new int[filas][columnas];
 
         for(int i = 0; i < filas; i++){
-            System.out.println("Escribe el valor de" + nombre + "[" + i +"][" + j +"]: ");
+            for(int j = 0; i < columnas; j++){
+                            System.out.println("Escribe el valor de" + nombre + "[" + i +"][" + j +"]: ");
             entrada = buffer.readLine();
             matriz[i][j] = Integer.parseInt(entrada);
+            }
         }
+        return matriz;
     }
 
     public static void main(String[] args) throws Exception {
