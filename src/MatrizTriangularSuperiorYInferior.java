@@ -52,6 +52,10 @@ public class MatrizTriangularSuperiorYInferior{
     }
 
     public static void main(String[] args) throws Exception {
-       
+        int filas, columnas;
+
+        System.out.println("Que tipo de matriz quieres usas? (superior/inferior)");
+        entrada = buffer.readLine();
+        String tipoMatriz = entrada.toLowerCase();
     }
 }
