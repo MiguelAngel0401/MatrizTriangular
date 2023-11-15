@@ -29,6 +29,16 @@ public class MatrizTriangularSuperiorYInferior{
         }
     }
 
+    public static boolean esTriangularSuperior(int[][] matriz){
+        for(int i = 0; i < matriz.length; i++){
+            for(int j = 0; j < i; j++){
+                if (matriz[i][j] !=0){
+                    return false;
+                }
+            }
+        }
+    }
+
     public static void main(String[] args) throws Exception {
        
     }
