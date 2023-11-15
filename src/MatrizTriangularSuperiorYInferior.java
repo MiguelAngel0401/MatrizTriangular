@@ -66,9 +66,22 @@ public class MatrizTriangularSuperiorYInferior{
         entrada = buffer.readLine();
         columnas = Integer.parseInt(entrada);
 
-        int[][] A = leerMatriz(filas, columnas, A);
+        int[][] A = leerMatriz(filas, columnas, 'A');
 
         System.out.println("Las Matrices");
         imprimirMatriz(A, 'A');
+
+        boolean esTriangularSuperior = esTriangularSuperior(A);
+        boolean esTriangularInferior = esTriangularInferior(A);
+
+        if("MatrizSuperior" == tipoMatriz && esTriangularSuperior){
+            System.out.println("La matriz es Triangular Superior");
+        } else if {
+            ("MatrizInferior" == tipoMatriz && esTriangularInferior){
+                System.out.println("La matriz es Triangular Inferior");
+            } else{
+                System.out.println("La matriz no es correcta");
+            }
+        }
     }
 }
