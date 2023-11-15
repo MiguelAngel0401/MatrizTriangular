@@ -20,6 +20,15 @@ public class MatrizTriangularSuperiorYInferior{
         return matriz;
     }
 
+    public static void imprimirMatriz(int[][] matriz, char nombre){
+        for(int i = 0; i < matriz.length; i++){
+            for( int j = 0; j < matriz[0].length; j++){
+                System.out.print(matriz[i][j] + "  ");
+            }
+            System.out.println(entrada);
+        }
+    }
+
     public static void main(String[] args) throws Exception {
        
     }
