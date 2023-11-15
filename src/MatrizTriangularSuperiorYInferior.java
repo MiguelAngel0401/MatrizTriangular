@@ -76,7 +76,7 @@ public class MatrizTriangularSuperiorYInferior{
 
         if("MatrizSuperior" == tipoMatriz && esTriangularSuperior){
             System.out.println("La matriz es Triangular Superior");
-        } else if {
+        } else if 
             ("MatrizInferior" == tipoMatriz && esTriangularInferior){
                 System.out.println("La matriz es Triangular Inferior");
             } else{
@@ -84,4 +84,4 @@ public class MatrizTriangularSuperiorYInferior{
             }
         }
     }
-}
+
