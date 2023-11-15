@@ -37,6 +37,7 @@ public class MatrizTriangularSuperiorYInferior{
                 }
             }
         }
+        return true;
     }
 
     public static void main(String[] args) throws Exception {
