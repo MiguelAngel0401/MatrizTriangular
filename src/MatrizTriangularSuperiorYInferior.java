@@ -40,6 +40,17 @@ public class MatrizTriangularSuperiorYInferior{
         return true;
     }
 
+    public static boolean esTriangularInferior(int[][] matriz){
+        for(int i = 0; i < matriz.length; i++){
+            for(int j = i + 1; j < matriz[i].length; j++){
+                if(matriz[i][j] !=0){
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
     public static void main(String[] args) throws Exception {
        
     }
